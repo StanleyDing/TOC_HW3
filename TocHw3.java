@@ -1,3 +1,16 @@
+// Name: ，丁士宸
+// Student ID: F74001014
+/* 
+ * Description:
+ * This program reads real-price housing information from the given URL as input.
+ * The output is the average price of a given road according to the arguments.
+ *
+ * The program will first read data from the given URL and store the information
+ * into JSONArray, then find the targets according to the arguments. Once a target is
+ * found, its price is added to variable 'sum'. Finally, 'sum' is devided by the 
+ * number of target that matches the input. If no matches is found, the program will 
+ * output a 0.
+ */
 import java.net.*;
 import java.io.*;
 import org.json.*;
@@ -14,7 +27,7 @@ public class TocHW3 {
 
         // check the number of the argument
         if(args.length != 4){
-            System.out.println("Usage TocHW3 <URL> <鄉鎮市區> <road> <year>");
+            System.out.println("Usage TocHw3 <URL> <鄉鎮市區> <road> <year>");
             System.exit(1);
         }
 
@@ -74,6 +87,9 @@ public class TocHW3 {
             System.exit(1);
         }
 
-        System.out.println((int)(sum/match));
+        if(match == 0)
+            System.out.println("0");
+        else
+            System.out.println((int)(sum/match));
     }
 }
