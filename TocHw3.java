@@ -15,7 +15,7 @@ import java.net.*;
 import java.io.*;
 import org.json.*;
 
-public class TocHW3 {
+public class TocHw3 {
     public static void main(String[] args) {
         int jarrLen = 0, year100 = 0;
         int match = 0;
